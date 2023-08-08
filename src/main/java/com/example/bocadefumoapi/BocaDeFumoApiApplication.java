@@ -15,9 +15,5 @@ public class BocaDeFumoApiApplication {
 
 		SpringApplication.run(BocaDeFumoApiApplication.class, args);
 
-		Logger.debug("debug mensagem");
-		Logger.info("info mensagem");
-		Logger.warn("warn mensagem");
-		Logger.error("error mensagem");
 	}
 }
