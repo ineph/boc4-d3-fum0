@@ -14,7 +14,6 @@ import org.springframework.web.util.ContentCachingRequestWrapper;
 import org.springframework.web.util.ContentCachingResponseWrapper;
 
 import java.io.IOException;
-import java.util.function.ToDoubleBiFunction;
 
 @Component
 public class RequestsLogger extends OncePerRequestFilter {
@@ -34,6 +33,7 @@ public class RequestsLogger extends OncePerRequestFilter {
         Integer responseStatus = response.getStatus();
 
         logReqRes(requestBody, responseBody, cachingRequestWrapper.getRequestURI(), cachingRequestWrapper.getMethod(), responseStatus);
+        cachingResponseWrapper.copyBodyToResponse();
 
     }
 
